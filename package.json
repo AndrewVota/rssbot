@@ -1,0 +1,30 @@
+{
+    "name": "rssbot",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "dev": "npm run build & node ./dist/server.js",
+        "generate": "drizzle-kit generate:pg",
+        "migrate": "npm run build & node ./dist/lib/database/migrate.js",
+        "registerGuildCommands": "npm run build & node ./dist/lib/client/registerGuildCommands.js",
+        "registerGlobalCommands": "npm run build & node ./dist/lib/client/registerGlobalCommands.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "discord.js": "^14.11.0",
+        "dotenv": "^16.1.4",
+        "drizzle-orm": "^0.26.5",
+        "postgres": "^3.3.5",
+        "rss-parser": "^3.13.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.3.1",
+        "drizzle-kit": "^0.18.1",
+        "typescript": "^5.1.3"
+    }
+}
