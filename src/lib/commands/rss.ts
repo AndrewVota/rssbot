@@ -117,7 +117,6 @@ export function buildEmbed(
     const embed = new EmbedBuilder()
         .setColor('#F99000')
         .setTitle(title)
-        .setDescription(description)
         .setURL(url)
         .setThumbnail(image)
         .setTimestamp()
